@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtreme RBX</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Xtreme RBX</title>
 </head>
 <body>
     <header>
-        <button class="nav-button home-button">
+        <a href="index.html" class="nav-button home-button" id="btn1">
             <i class="fas fa-home"></i> Inicio
-        </button>               
-        <h1>GUÍA COMPLETA PARA OBTENER ROBUX GRATIS</h1>
+        </a>               
+        <h1 id="title">GUÍA COMPLETA PARA OBTENER ROBUX GRATIS</h1>
         <nav>
-            <button class="nav-button">MÉTODOS</button>
-            <button class="nav-button">EVITA ESTAFAS</button>
-            <button class="nav-button">EVENTOS</button>
-            <button class="nav-button">JUEGOS PARA GANAR ROBUX</button>
+            <button class="nav-button" id="btn2">MÉTODOS</button>
+            <button class="nav-button" id="btn3">EVITA ESTAFAS</button>
+            <button class="nav-button" id="btn4">EVENTOS</button>
+            <button class="nav-button" id="btn5">JUEGOS PARA GANAR ROBUX</button>
         </nav>
+
+        <div class="language-switcher">
+            <div class="dropdown">
+                <i class="fas fa-globe"></i>
+                <div class="dropdown-content">
+                    <button onclick="changeLanguage('es')">Español</button>
+                    <button onclick="changeLanguage('en')">English</button>
+                    <button onclick="changeLanguage('de')">Deutsch</button>
+                </div>
+            </div>
+        </div>        
     </header>
+
     <main>
         <section class="card">
-            <h2>⚙ MÉTODOS PARA OBTENER ROBUX</h2>
-            <p>Descubre formas legítimas como crear juegos, vender ítems y usar el programa de afiliados.</p>
+            <h2 id="card1-title">⚙ MÉTODOS PARA OBTENER ROBUX</h2>
+            <p id="card1-text">Descubre formas legítimas como crear juegos, vender ítems y usar el programa de afiliados.</p>
         </section>
         <section class="card">
-            <h2>🚨 EVITA ESTAFAS</h2>
-            <p>Aprende a identificar fraudes, sitios engañosos y protege tu cuenta de Roblox.</p>
+            <h2 id="card2-title">🚨 EVITA ESTAFAS</h2>
+            <p id="card2-text">Aprende a identificar fraudes, sitios engañosos y protege tu cuenta de Roblox.</p>
         </section>
         <section class="card">
-            <h2>🎮 PARTICIPA EN EVENTOS</h2>
-            <p>Algunos eventos especiales en Roblox otorgan Robux o recompensas exclusivas.</p>
+            <h2 id="card3-title">🎮 PARTICIPA EN EVENTOS</h2>
+            <p id="card3-text">Algunos eventos especiales en Roblox otorgan Robux o recompensas exclusivas.</p>
         </section>
         <section class="card">
-            <h2>📥 JUEGOS QUE DAN ROBUX</h2>
-            <p>Explora juegos en Roblox que ofrecen recompensas reales al completar desafíos.</p>
+            <h2 id="card4-title">📥 JUEGOS QUE DAN ROBUX</h2>
+            <p id="card4-text">Explora juegos en Roblox que ofrecen recompensas reales al completar desafíos.</p>
         </section>
-    </main>
+    </main>  
+
+    <script src="script.js"></script>
 </body>
 </html>
