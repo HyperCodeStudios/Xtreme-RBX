@@ -1,55 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xtreme RBX</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>XtremeRBX</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="nav-button home-button" id="btn1">
-            <i class="fas fa-home"></i> Inicio
-        </a>               
-        <h1 id="title">GUÍA COMPLETA PARA OBTENER ROBUX GRATIS</h1>
-        <nav>
-            <button class="nav-button" id="btn2">MÉTODOS</button>
-            <button class="nav-button" id="btn3">EVITA ESTAFAS</button>
-            <button class="nav-button" id="btn4">EVENTOS</button>
-            <button class="nav-button" id="btn5">JUEGOS PARA GANAR ROBUX</button>
-        </nav>
-
+    <nav>
         <div class="language-switcher">
-            <div class="dropdown">
-                <i class="fas fa-globe"></i>
-                <div class="dropdown-content">
-                    <button onclick="changeLanguage('es')">Español</button>
-                    <button onclick="changeLanguage('en')">English</button>
-                    <button onclick="changeLanguage('de')">Deutsch</button>
-                </div>
-            </div>
-        </div>        
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+        <a href="#" id="navInicio">Inicio</a>
+        <a href="#" id="navMetodos">Métodos</a>
+        <a href="#" id="navHerramientas">Herramientas</a>
+        <a href="#" id="navContacto">Contacto</a>
+    </nav>
+
+    <header>
+        <h1 id="headerTitulo">Bienvenido a <span class="highlight">XtremeRBX</span></h1>
+        <p id="headerTexto">
+            Descubre los mejores métodos para conseguir <span class="green">Robux gratis</span>,
+            con consejos reales y actualizados.
+        </p>
+        <button class="button" id="btnEmpezar">Empezar ahora</button>
+        <button class="button secondary" id="btnSaberMas">Saber más</button>
     </header>
 
-    <main>
-        <section class="card">
-            <h2 id="card1-title">⚙ MÉTODOS PARA OBTENER ROBUX</h2>
-            <p id="card1-text">Descubre formas legítimas como crear juegos, vender ítems y usar el programa de afiliados.</p>
-        </section>
-        <section class="card">
-            <h2 id="card2-title">🚨 EVITA ESTAFAS</h2>
-            <p id="card2-text">Aprende a identificar fraudes, sitios engañosos y protege tu cuenta de Roblox.</p>
-        </section>
-        <section class="card">
-            <h2 id="card3-title">🎮 PARTICIPA EN EVENTOS</h2>
-            <p id="card3-text">Algunos eventos especiales en Roblox otorgan Robux o recompensas exclusivas.</p>
-        </section>
-        <section class="card">
-            <h2 id="card4-title">📥 JUEGOS QUE DAN ROBUX</h2>
-            <p id="card4-text">Explora juegos en Roblox que ofrecen recompensas reales al completar desafíos.</p>
-        </section>
-    </main>  
+    <section class="methods">
+        <h2 id="metodosTitulo">Métodos Populares</h2>
+        <div class="flex-container">
+            <div class="box">
+                <h3 id="metodo1Titulo">Método #1</h3>
+                <p id="metodo1Texto">Aprende cómo puedes obtener Robux fácilmente con este método probado por la comunidad.</p>
+                <button class="button" id="btnMetodo1">Ver método</button>
+            </div>
+            <div class="box">
+                <h3 id="metodo2Titulo">Método #2</h3>
+                <p id="metodo2Texto">Aprende cómo puedes obtener Robux fácilmente con este método probado por la comunidad.</p>
+                <button class="button" id="btnMetodo2">Ver método</button>
+            </div>
+            <div class="box">
+                <h3 id="metodo3Titulo">Método #3</h3>
+                <p id="metodo3Texto">Aprende cómo puedes obtener Robux fácilmente con este método probado por la comunidad.</p>
+                <button class="button" id="btnMetodo3">Ver método</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools">
+        <h2 id="herramientasTitulo">Herramientas Exclusivas</h2>
+        <div class="flex-container">
+            <div class="box">
+                <h3 id="calcTitulo">Calculadora de Robux</h3>
+                <p id="calcTexto">Calcula cuántos Robux puedes ganar con distintos métodos.</p>
+                <button class="button" id="btnCalc">Usar herramienta</button>
+            </div>
+            <div class="box">
+                <h3 id="verifTitulo">Verificador de métodos</h3>
+                <p id="verifTexto">Comprueba si un método es legítimo o falso.</p>
+                <button class="button" id="btnVerif">Probar ahora</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 id="testimoniosTitulo">Lo que dicen nuestros usuarios</h2>
+        <div class="flex-container">
+            <div class="box testimonial" id="testimonio1">
+                "¡Gracias a XtremeRBX conseguí Robux sin gastar dinero y funcionó perfecto!"<br />
+                — <span class="highlight">AlexGamer24</span>
+            </div>
+            <div class="box testimonial" id="testimonio2">
+                "Los métodos son reales, seguros y fáciles de seguir. ¡Muy recomendado!"<br />
+                — <span class="highlight">RobloxQueen88</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2 id="faqTitulo">Preguntas Frecuentes</h2>
+        <p id="faq1">
+            <strong>¿Es seguro usar estos métodos?</strong><br />
+            Sí, todos los métodos han sido verificados por nuestra comunidad y son 100% seguros.
+        </p>
+        <p id="faq2">
+            <strong>¿Necesito descargar algo?</strong><br />
+            No. Todos los métodos son online y no requieren descargas.
+        </p>
+        <p id="faq3">
+            <strong>¿Funcionan en cualquier país?</strong><br />
+            Sí, nuestros métodos funcionan en la mayoría de los países donde Roblox está disponible.
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2025 XtremeRBX. Todos los derechos reservados. |
+        <a href="#" id="footerPrivacidad">Política de privacidad</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>
