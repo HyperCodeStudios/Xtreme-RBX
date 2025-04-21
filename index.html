@@ -1,109 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>XtremeRBX</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>XtremeRBX</title>
 </head>
 <body>
-    <nav>
-        <div class="language-switcher">
-            <select id="languageSelect" onchange="changeLanguage()">
-                <option value="es" selected>Español</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-            </select>
-        </div>
-        <a href="#" id="navInicio">Inicio</a>
-        <a href="#" id="navMetodos">Métodos</a>
-        <a href="#" id="navHerramientas">Herramientas</a>
-        <a href="#" id="navContacto">Contacto</a>
-    </nav>
+  <nav>
+    <div class="language-switcher">
+      <select id="languageSelect" onchange="changeLanguage(this.value)">
+        <option value="es" selected>Español</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </div>
+    <a href="#" id="homeLink">Inicio</a>
+    <a href="#" id="methodsLink">Métodos</a>
+    <a href="#" id="toolsLink">Herramientas</a>
+    <a href="#" id="contactLink">Contacto</a>
+  </nav>
 
-    <header>
-        <h1 id="headerTitulo">Bienvenido a <span class="highlight">XtremeRBX</span></h1>
-        <p id="headerTexto">
-            Descubre los mejores métodos para conseguir <span class="green">Robux gratis</span>,
-            con consejos reales y actualizados.
-        </p>
-        <button class="button" id="btnEmpezar">Empezar ahora</button>
-        <button class="button secondary" id="btnSaberMas">Saber más</button>
-    </header>
+  <header>
+    <h1 id="headerTitle">Bienvenido a <span class="highlight">XtremeRBX</span></h1>
+    <p id="headerDescription">Descubre los mejores métodos para conseguir <span class="green">Robux gratis</span>, con consejos reales y actualizados.</p>
+    <button class="button" id="startButton">Empezar ahora</button>
+  </header>
 
-    <section class="methods">
-        <h2 id="metodosTitulo">Métodos Populares</h2>
-        <div class="flex-container">
-            <div class="box">
-                <h3 id="metodo1Titulo">Método #1</h3>
-                <p id="metodo1Texto">Aprende cómo puedes obtener Robux fácilmente con este método probado por la comunidad.</p>
-                <button class="button" id="btnMetodo1">Ver método</button>
-            </div>
-            <div class="box">
-                <h3 id="metodo2Titulo">Método #2</h3>
-                <p id="metodo2Texto">Aprende cómo puedes obtener Robux fácilmente con este método probado por la comunidad.</p>
-                <button class="button" id="btnMetodo2">Ver método</button>
-            </div>
-            <div class="box">
-                <h3 id="metodo3Titulo">Método #3</h3>
-                <p id="metodo3Texto">Aprende cómo puedes obtener Robux fácilmente con este método probado por la comunidad.</p>
-                <button class="button" id="btnMetodo3">Ver método</button>
-            </div>
-        </div>
-    </section>
+  <section class="methods">
+    <h2 id="methodsTitle">Métodos Populares</h2>
+    <div class="flex-container">
+      <div class="box">
+        <h3 id="mentorTitle">Mentor Roblox</h3>
+        <p id="mentorDescription">Sigue nuestros pasos y conviértete en un jugador experto que sabe cómo moverse y conseguir lo que quiere.</p>
+      </div>
+      <div class="box">
+        <h3 id="tipsTitle">Consejos prácticos</h3>
+        <p id="tipsDescription">Desde cómo intercambiar items hasta qué juegos tienen más Robux oculto: te lo contamos todo.</p>
+      </div>
+      <div class="box">
+        <h3 id="gamificationTitle">Gamificación</h3>
+        <p id="gamificationDescription">Aprende jugando. Cada truco, cada desafío que superes, te prepara para ganar más Robux de forma inteligente.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="tools">
-        <h2 id="herramientasTitulo">Herramientas Exclusivas</h2>
-        <div class="flex-container">
-            <div class="box">
-                <h3 id="calcTitulo">Calculadora de Robux</h3>
-                <p id="calcTexto">Calcula cuántos Robux puedes ganar con distintos métodos.</p>
-                <button class="button" id="btnCalc">Usar herramienta</button>
-            </div>
-            <div class="box">
-                <h3 id="verifTitulo">Verificador de métodos</h3>
-                <p id="verifTexto">Comprueba si un método es legítimo o falso.</p>
-                <button class="button" id="btnVerif">Probar ahora</button>
-            </div>
-        </div>
-    </section>
+  <section class="tools">
+    <h2 id="toolsTitle">Robux Calculator</h2>
+    <div class="flex-container">
+      <div class="box">
+        <h3 id="calcBeforeTitle">Robux before the commision</h3>
+        <p id="calcBeforeDescription">The amount of Robux you will get paid.</p>
+        <input type="number" id="calcBeforeInput" class="styled-input" placeholder="Enter an amount..." min="0" step="1" />
+      </div>
+      <div class="box">
+        <h3 id="calcAfterTitle">Robux after the commision (-30%)</h3>
+        <p id="calcAfterDescription">Amount of Robux you will receive on your account.</p>
+        <input type="number" id="calcAfterInput" class="styled-input" placeholder="Enter an amount..." min="0" step="1" />
+      </div>
+    </div>
+  </section>
 
-    <section class="testimonials">
-        <h2 id="testimoniosTitulo">Lo que dicen nuestros usuarios</h2>
-        <div class="flex-container">
-            <div class="box testimonial" id="testimonio1">
-                "¡Gracias a XtremeRBX conseguí Robux sin gastar dinero y funcionó perfecto!"<br />
-                — <span class="highlight">AlexGamer24</span>
-            </div>
-            <div class="box testimonial" id="testimonio2">
-                "Los métodos son reales, seguros y fáciles de seguir. ¡Muy recomendado!"<br />
-                — <span class="highlight">RobloxQueen88</span>
-            </div>
-        </div>
-    </section>
+  <section class="testimonials">
+    <h2 id="testimonialsTitle">Lo que dicen nuestros usuarios</h2>
+    <div class="flex-container">
+      <div class="box testimonial" id="testimonial1">"¡Gracias a XtremeRBX conseguí Robux sin gastar dinero y funcionó perfecto!"<br />— <span class="highlight">AlexGamer24</span></div>
+      <div class="box testimonial" id="testimonial2">"Los métodos son reales, seguros y fáciles de seguir. ¡Muy recomendado!"<br />— <span class="highlight">RobloxQueen88</span></div>
+    </div>
+  </section>
 
-    <section class="faq">
-        <h2 id="faqTitulo">Preguntas Frecuentes</h2>
-        <p id="faq1">
-            <strong>¿Es seguro usar estos métodos?</strong><br />
-            Sí, todos los métodos han sido verificados por nuestra comunidad y son 100% seguros.
-        </p>
-        <p id="faq2">
-            <strong>¿Necesito descargar algo?</strong><br />
-            No. Todos los métodos son online y no requieren descargas.
-        </p>
-        <p id="faq3">
-            <strong>¿Funcionan en cualquier país?</strong><br />
-            Sí, nuestros métodos funcionan en la mayoría de los países donde Roblox está disponible.
-        </p>
-    </section>
+  <section class="faq">
+    <h2 id="faqTitle">Preguntas Frecuentes</h2>
+    <p id="faq1"><strong>¿Es seguro usar estos métodos?</strong><br />Sí, todos los métodos han sido verificados por nuestra comunidad y son 100% seguros.</p>
+    <p id="faq2"><strong>¿Necesito descargar algo?</strong><br />No. Todos los métodos son online y no requieren descargas.</p>
+    <p id="faq3"><strong>¿Funcionan en cualquier país?</strong><br />Sí, nuestros métodos funcionan en la mayoría de los países donde Roblox está disponible.</p>
+  </section>
 
-    <footer>
-        &copy; 2025 XtremeRBX. Todos los derechos reservados. |
-        <a href="#" id="footerPrivacidad">Política de privacidad</a>
-    </footer>
+  <footer>
+    &copy; 2025 XtremeRBX. Todos los derechos reservados. |
+    <a href="#" id="privacyPolicyLink">Política de privacidad</a>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
